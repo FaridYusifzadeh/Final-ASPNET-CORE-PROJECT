@@ -1,0 +1,1926 @@
+﻿@model HomeModel
+@{
+    ViewData["Title"] = "Home";
+
+}
+
+<!-- main-search start -->
+<div class="main-search-active">
+    <div class="sidebar-search-icon">
+        <button class="search-close"><span class="ion-android-close"></span></button>
+    </div>
+    <div class="sidebar-search-input">
+        <form>
+            <div class="form-search">
+                <input id="search" class="input-text" value="" placeholder="Search Entire Store" type="search">
+                <button>
+                    <i class="ion-android-search"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- main-search End -->
+<!--Slider Area Start-->
+<div class="slider-area">
+    <div class="hero-slider owl-carousel">
+        <!--Single Slider Start-->
+        @foreach (var slider in Model.Sliders)
+	{
+        <div class="single-slider" style="background-image: url(img/slider/@slider.Image)">
+            <div class="hero-slider-content">
+                <h1>@slider.Description</h1>
+                <h2>@slider.Title</h2>
+                <div class="slider-btn">
+                    <a href="#">Shop Now</a>
+                </div>
+            </div>
+        </div>
+	}
+
+        
+        <!--Single Slider End-->
+      
+    </div>
+</div>
+<!--Slider Area End-->
+<!--Feature Area Start-->
+<div class="feature-area pt-80 pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <!--Single Feature Area Start-->
+                <div class="single-feature-area mb-30">
+                    <div class="feature-content">
+                        <h3>free shipping worldwide</h3>
+                    </div>
+                </div>
+                <!--Single Feature Area End-->
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <!--Single Feature Area Start-->
+                <div class="single-feature-area mb-30">
+                    <div class="feature-content">
+                        <h3>free shipping worldwide</h3>
+                    </div>
+                </div>
+                <!--Single Feature Area End-->
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <!--Single Feature Area Start-->
+                <div class="single-feature-area mb-30">
+                    <div class="feature-content">
+                        <h3>free shipping worldwide</h3>
+                    </div>
+                </div>
+                <!--Single Feature Area End-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--Feature Area End-->
+<!--Our Collection Area Start-->
+<div class="our-collection-area collection-bg pb-75">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!--Section Title Start-->
+                <div class="section-title">
+                    <span class="sub-title">@Model.Descriptions.ElementAt(0).Title</span>
+                    <h2>@Model.Descriptions.ElementAt(0).Descript</h2>
+                </div>
+                <!--Section Title End-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <!--Single Categorie Collection Start-->
+                <div class="single-categorie-collection mt-30">
+                    <div class="categorie-collection-img">
+                        <a href="#"><img src="~/img/banner/home1-banner1.jpg" alt=""></a>
+                    </div>
+                </div>
+                <!--Single Categorie Collection End-->
+            </div>
+            <div class="col-md-3">
+                <!--Single Categorie Collection Start-->
+                <div class="single-categorie-collection mt-30">
+                    <div class="categorie-collection-img">
+                        <a href="#"><img src="~/img/banner/home1-banner2.jpg" alt=""></a>
+                    </div>
+                </div>
+                <!--Single Categorie Collection End-->
+            </div>
+            <div class="col-md-6">
+                <!--Single Categorie Collection Start-->
+                <div class="single-categorie-collection mt-30">
+                    <div class="categorie-collection-img">
+                        <a href="#"><img src="~/img/banner/home1-banner3.jpg" alt=""></a>
+                    </div>
+                </div>
+                <!--Single Categorie Collection End-->
+            </div>
+            <div class="col-md-6">
+                <!--Single Categorie Collection Start-->
+                <div class="single-categorie-collection mt-30">
+                    <div class="categorie-collection-img">
+                        <a href="#"><img src="~/img/banner/home1-banner4.jpg" alt=""></a>
+                    </div>
+                </div>
+                <!--Single Categorie Collection End-->
+            </div>
+            <div class="col-md-3">
+                <!--Single Categorie Collection Start-->
+                <div class="single-categorie-collection mt-30">
+                    <div class="categorie-collection-img">
+                        <a href="#"><img src="~/img/banner/home1-banner5.jpg" alt=""></a>
+                    </div>
+                </div>
+                <!--Single Categorie Collection End-->
+            </div>
+            <div class="col-md-3">
+                <!--Single Categorie Collection Start-->
+                <div class="single-categorie-collection mt-30">
+                    <div class="categorie-collection-img">
+                        <a href="#"><img src="~/img/banner/home1-banner6.jpg" alt=""></a>
+                    </div>
+                </div>
+                <!--Single Categorie Collection End-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--Our Collection Area End-->
+<!--Product Area Start-->
+<div class="product-area pt-20 pb-35">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!--Section Title 2 Start-->
+                <div class="section-title2">
+                    <h2>Our Products</h2>
+                    <!--Product Tab Menu Start-->
+                    <div class="product-tab-menu">
+                        <ul class="nav">
+                            <li><a class="active" data-toggle="tab" href="#bedroom">bedroom</a></li>
+                            <li><a data-toggle="tab" href="#diningroom">dining room</a></li>
+                            <li><a data-toggle="tab" href="#livingroom">Livingroom</a></li>
+                            <li><a data-toggle="tab" href="#office">office</a></li>
+                        </ul>
+                    </div>
+                    <!--Product Tab Menu End-->
+                </div>
+                <!--Section Title 2 End-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="bedroom">
+                        <div class="row">
+                            <div class="product-slider owl-carousel">
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product1.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Lenovo Ideacentre 300</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$116.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product5.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">HP Notebook 15-ay011nr</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$78.80</span>
+                                                <span class="regular-price">$80.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product2.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer R240HY bidx</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$80.00</span>
+                                                <span class="regular-price">$86.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product6.jpg" alt="">
+                                                <img class="hover-img" src="img/product/product7.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer Aspire Desktop</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$98.00</span>
+                                                <span class="regular-price">$122.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product3.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Samsung Galaxy Tab A</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$241.99</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product8.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Dell Inspiron 24</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$1,202.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product4.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer Aspire E 15</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$602.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product9.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer Aspire AIO</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$86.00</span>
+                                                <span class="regular-price">$92.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product10.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <span class="descount-sticker">-10%</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">HP Pavilion 22cwa</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$110.00</span>
+                                                <span class="regular-price">$122.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="diningroom">
+                        <div class="row">
+                            <div class="product-slider owl-carousel">
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product11.jpg" alt="">
+                                                <img class="hover-img" src="img/product/product8.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">ASUS ZenBook</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$104.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product2.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer R240HY bidx</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$80.00</span>
+                                                <span class="regular-price">$86.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product12.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Lenovo Ideacentre 300</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$116.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product8.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Dell Inspiron 24</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$1,202.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product13.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">ASUS UX360CA</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$98.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product16.jpg" alt="">
+                                                <img class="hover-img" src="img/product/product8.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer R240HY bidx</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$80.00</span>
+                                                <span class="regular-price">$86.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product14.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer Aspire VX 15</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$68.00</span>
+                                                <span class="regular-price">$74.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product4.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer Aspire E 15</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$602.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product9.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer Aspire AIO</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$86.00</span>
+                                                <span class="regular-price">$92.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="livingroom">
+                        <div class="row">
+                            <div class="product-slider owl-carousel">
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product1.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Lenovo Ideacentre 300</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$116.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product5.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">HP Notebook 15-ay011nr</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$78.80</span>
+                                                <span class="regular-price">$80.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product11.jpg" alt="">
+                                                <img class="hover-img" src="img/product/product8.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">ASUS ZenBook</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$104.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product2.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer R240HY bidx</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$80.00</span>
+                                                <span class="regular-price">$86.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product7.jpg" alt="">
+                                                <img class="hover-img" src="img/product/product9.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer Aspire E 15</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$602.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product6.jpg" alt="">
+                                                <img class="hover-img" src="img/product/product7.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer Aspire Desktop</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$98.00</span>
+                                                <span class="regular-price">$122.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product3.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Samsung Galaxy Tab A</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$241.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product12.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Lenovo Ideacentre 300</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$116.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product17.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">HP Notebook 15-ay011nr</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$78.80</span>
+                                                <span class="regular-price">$80.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product8.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Dell Inspiron 24</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$1,202.80</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="office">
+                        <div class="row">
+                            <div class="product-slider owl-carousel">
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product1.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Lenovo Ideacentre 300</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$116.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product7.jpg" alt="">
+                                                <img class="hover-img" src="img/product/product9.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer Aspire E 15</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$602.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product17.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">HP Notebook 15-ay011nr</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$78.80</span>
+                                                <span class="regular-price">$80.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product18.jpg" alt="">
+                                                <img class="hover-img" src="img/product/product17.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">ASUS ZenBook</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$104.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product4.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer Aspire E 15</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$602.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product19.jpg" alt="">
+                                                <img class="hover-img" src="img/product/product1.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer Aspire Desktop</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$98.00</span>
+                                                <span class="regular-price">$122.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product4.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer Aspire E 15</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$602.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product8.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">Acer Aspire AIO</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$86.00</span>
+                                                <span class="regular-price">$92.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Single Product Area Start-->
+                                    <div class="single-product-area mb-40">
+                                        <div class="product-img img-full">
+                                            <a href="single-product.html">
+                                                <img class="first-img" src="img/product/product10.jpg" alt="">
+                                            </a>
+                                            <span class="sticker">New</span>
+                                            <div class="product-action">
+                                                <ul>
+                                                    <li><a href="cart.html" title="Add To Cart"><span class="icon_bag_alt"></span></a></li>
+                                                    <li><a href="wishlist.html" title="Add to Wish List"><span class=" icon_heart_alt "></span></a></li>
+                                                    <li><a href="compare.html" title="Compare this Product"><span class="icon_datareport"></span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="product-quickview">
+                                                <li><a href="#open-modal" data-toggle="modal" title="Quick View"><span class="icon_search"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a href="single-product.html">HP Pavilion 22cwa</a></h4>
+                                            <div class="product-price">
+                                                <span class="now-price">$110.00</span>
+                                                <span class="regular-price">$122.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Single Product Area End-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Product Area End-->
+<!--Deal Product Area Start-->
+<div class="deal-product-area deal-bg">
+    <div class="deal-produt-slider owl-carousel">
+        <!--Single Deal Product Start-->
+        <div class="single-deal-product">
+            <div class="deal-product-img img-full">
+                <a href="single-product.html"><img src="~/img/product/product10.jpg" alt=""></a>
+                <span class="descount-sticker">-10%</span>
+            </div>
+            <div class="deal-product-content">
+                <div class="section-title">
+                    <span class="sub-title">Our Collections</span>
+                </div>
+                <h3><a href="single-product.html">HP Pavilion 22cwa</a></h3>
+                <p class="product-description">The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed speci..</p>
+                <div class="product-price deal-price">
+                    <span class="now-price">$78.80</span>
+                    <span class="regular-price">$80.00</span>
+                </div>
+                <div class="product-countdown">
+                    <div class="pro-countdown" data-countdown="2020/09/04"></div>
+                </div>
+            </div>
+        </div>
+        <!--Single Deal Product End-->
+        <!--Single Deal Product Start-->
+        <div class="single-deal-product">
+            <div class="deal-product-img img-full">
+                <a href="single-product.html"><img src="~/img/product/product9.jpg" alt=""></a>
+                <span class="descount-sticker">-10%</span>
+            </div>
+            <div class="deal-product-content">
+                <div class="section-title">
+                    <span class="sub-title">Our Collections</span>
+                </div>
+                <h3><a href="single-product.html">Acer Aspire Desktop</a></h3>
+                <p class="product-description">The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed speci..</p>
+                <div class="product-price deal-price">
+                    <span class="now-price">$85.80</span>
+                    <span class="regular-price">$90.00</span>
+                </div>
+                <div class="product-countdown">
+                    <div class="pro-countdown" data-countdown="2020/09/04"></div>
+                </div>
+            </div>
+        </div>
+        <!--Single Deal Product End-->
+        <!--Single Deal Product Start-->
+        <div class="single-deal-product">
+            <div class="deal-product-img img-full">
+                <a href="single-product.html"><img src="~/img/product/product8.jpg" alt=""></a>
+                <span class="descount-sticker">-10%</span>
+            </div>
+            <div class="deal-product-content">
+                <div class="section-title">
+                    <span class="sub-title">Our Collections</span>
+                </div>
+                <h3><a href="single-product.html">Acer Aspire VX 15</a></h3>
+                <p class="product-description">The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed speci..</p>
+                <div class="product-price deal-price">
+                    <span class="now-price">$105.80</span>
+                    <span class="regular-price">$120.00</span>
+                </div>
+                <div class="product-countdown">
+                    <div class="pro-countdown" data-countdown="2020/09/04"></div>
+                </div>
+            </div>
+        </div>
+        <!--Single Deal Product End-->
+    </div>
+</div>
+<!--Deal Product Area End-->
+<!--List Product Area Start-->
+<div class="list-product-area pt-80 pb-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                <div class="row">
+                    <div class="col-12">
+                        <!--List Product Section Title Start-->
+                        <div class="list-product-section-title mb-30">
+                            <h2>New Arrivals</h2>
+                        </div>
+                        <!--List Product Section Title End-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="list-product-slider owl-carousel">
+                            <div class="list-slider-group">
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Lenovo Ideacentre 300</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$78.80</span>
+                                            <span class="regular-price">$80.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">HP Notebook 15-ay011nr</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$90.80</span>
+                                            <span class="regular-price">$116.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">ASUS ZenBook</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$104.80</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                            </div>
+                            <div class="list-slider-group">
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Acer R240HY bidx</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$80.80</span>
+                                            <span class="regular-price">$86.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product5.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Acer Aspire E 15</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$602.80</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product6.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Acer Aspire Desktop</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$98.00</span>
+                                            <span class="regular-price">$122.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                            </div>
+                            <div class="list-slider-group">
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product7.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Samsung Galaxy Tab A</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$241.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product8.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Lenovo Ideacentre 300</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$116.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product9.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">HP Notebook 15-ay011nr</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$78.80</span>
+                                            <span class="regular-price">$80.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="row">
+                    <div class="col-12">
+                        <!--List Product Section Title Start-->
+                        <div class="list-product-section-title mb-30">
+                            <h2>Best Seller</h2>
+                        </div>
+                        <!--List Product Section Title End-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="list-product-slider owl-carousel">
+                            <div class="list-slider-group">
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Acer R240HY bidx</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$80.80</span>
+                                            <span class="regular-price">$86.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product5.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Acer Aspire E 15</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$602.80</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product6.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Acer Aspire Desktop</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$98.00</span>
+                                            <span class="regular-price">$122.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                            </div>
+                            <div class="list-slider-group">
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Lenovo Ideacentre 300</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$78.80</span>
+                                            <span class="regular-price">$80.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">HP Notebook 15-ay011nr</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$90.80</span>
+                                            <span class="regular-price">$116.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">ASUS ZenBook</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$104.80</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                            </div>
+                            <div class="list-slider-group">
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product7.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Samsung Galaxy Tab A</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$241.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product8.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Lenovo Ideacentre 300</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$116.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product9.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">HP Notebook 15-ay011nr</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$78.80</span>
+                                            <span class="regular-price">$80.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="row">
+                    <div class="col-12">
+                        <!--List Product Section Title Start-->
+                        <div class="list-product-section-title mb-30">
+                            <h2>Most view</h2>
+                        </div>
+                        <!--List Product Section Title End-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="list-product-slider owl-carousel">
+                            <div class="list-slider-group">
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product7.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Samsung Galaxy Tab A</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$241.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product8.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Lenovo Ideacentre 300</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$116.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product9.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">HP Notebook 15-ay011nr</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$78.80</span>
+                                            <span class="regular-price">$80.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                            </div>
+                            <div class="list-slider-group">
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Lenovo Ideacentre 300</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$78.80</span>
+                                            <span class="regular-price">$80.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">HP Notebook 15-ay011nr</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$90.80</span>
+                                            <span class="regular-price">$116.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">ASUS ZenBook</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$104.80</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                            </div>
+                            <div class="list-slider-group">
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Acer R240HY bidx</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$80.80</span>
+                                            <span class="regular-price">$86.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product5.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Acer Aspire E 15</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$602.80</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                                <!--Single List Product Start-->
+                                <div class="single-list-product mb-50">
+                                    <div class="product-img img-full">
+                                        <a href="single-product.html"><img src="~/img/product/product6.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a href="single-product.html">Acer Aspire Desktop</a></h4>
+                                        <div class="product-price">
+                                            <span class="now-price">$98.00</span>
+                                            <span class="regular-price">$122.00</span>
+                                        </div>
+                                        <a class="add-cart-btn" href="cart.html">Add To Cart</a>
+                                    </div>
+                                </div>
+                                <!--Single List Product End-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--List Product Area End-->
+<!--About Area Start-->
+<div class="about-area about-bg">
+    <div class="indecor-about">
+        <div class="section-title">
+            <span class="sub-title">About Me</span>
+            <h2>neque dis nam parturient.</h2>
+        </div>
+        <p class="about-des">Mauris interdum magna eu neque convallis, vel laoreet lectus ultrices. Mauris at ullamcorper orci. Maecenas in nulla erat.</p>
+        <a class="about-btn" href="#">read more</a>
+    </div>
+</div>
+<!--About Area End-->
+<!--Brand Area Start-->
+<div class="brand-area pt-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="brand-active owl-carousel">
+                    <!--Single Brand Start-->
+                    <div class="single-brand">
+                        <a href="#"><img src="~/img/brand/brand1.png" alt=""></a>
+                    </div>
+                    <!--Single Brand End-->
+                    <!--Single Brand Start-->
+                    <div class="single-brand">
+                        <a href="#"><img src="~/img/brand/brand2.png" alt=""></a>
+                    </div>
+                    <!--Single Brand End-->
+                    <!--Single Brand Start-->
+                    <div class="single-brand">
+                        <a href="#"><img src="~/img/brand/brand3.png" alt=""></a>
+                    </div>
+                    <!--Single Brand End-->
+                    <!--Single Brand Start-->
+                    <div class="single-brand">
+                        <a href="#"><img src="~/img/brand/brand4.png" alt=""></a>
+                    </div>
+                    <!--Single Brand End-->
+                    <!--Single Brand Start-->
+                    <div class="single-brand">
+                        <a href="#"><img src="~/img/brand/brand5.png" alt=""></a>
+                    </div>
+                    <!--Single Brand End-->
+                    <!--Single Brand Start-->
+                    <div class="single-brand">
+                        <a href="#"><img src="~/img/brand/brand1.png" alt=""></a>
+                    </div>
+                    <!--Single Brand End-->
+                    <!--Single Brand Start-->
+                    <div class="single-brand">
+                        <a href="#"><img src="~/img/brand/brand4.png" alt=""></a>
+                    </div>
+                    <!--Single Brand End-->
+                    <!--Single Brand Start-->
+                    <div class="single-brand">
+                        <a href="#"><img src="~/img/brand/brand5.png" alt=""></a>
+                    </div>
+                    <!--Single Brand End-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Brand Area End-->
+<!--Blog Area Start-->
+<div class="blog-area pt-10 pb-75">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!--Section Title 2 Start-->
+                <div class="section-title2">
+                    <h2>from our blogs</h2>
+                </div>
+                <!--Section Title 2 End-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="blog-slider owl-carousel">
+                <div class="col-md-12">
+                    <!--Single Blog Start-->
+                    <div class="single-blog">
+                        <div class="blog-img img-full">
+                            <a href="single-blog.html"><img src="~/img/blog/small/blog1.jpg" alt=""><span class="icon-view"></span></a>
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title"><a href="single-blog.html">Best of Hair & Makeup New York Spring/Summer 2016</a></h3>
+                            <div class="blog-meta">
+                                <p class="author-name">post by: <span>HasTech</span> - 30 Oct 2017</p>
+                            </div>
+                            <a class="read-btn" href="single-blog.html">read more</a>
+                        </div>
+                    </div>
+                    <!--Single Blog End-->
+                </div>
+                <div class="col-md-12">
+                    <!--Single Blog Start-->
+                    <div class="single-blog">
+                        <div class="blog-img img-full">
+                            <a href="single-blog.html"><img src="~/img/blog/small/blog2.jpg" alt=""><span class="icon-view"></span></a>
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title"><a href="single-blog.html">Dior F/W 2015 First Fashion Show in 360• Experience</a></h3>
+                            <div class="blog-meta">
+                                <p class="author-name">post by: <span>HasTech</span> - 30 Oct 2017</p>
+                            </div>
+                            <a class="read-btn" href="single-blog.html">read more</a>
+                        </div>
+                    </div>
+                    <!--Single Blog End-->
+                </div>
+                <div class="col-md-12">
+                    <!--Single Blog Start-->
+                    <div class="single-blog">
+                        <div class="blog-img img-full">
+                            <a href="single-blog.html"><img src="~/img/blog/small/blog1.jpg" alt=""><span class="icon-view"></span></a>
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title"><a href="single-blog.html">Best of Hair & Makeup New York Spring/Summer 2016</a></h3>
+                            <div class="blog-meta">
+                                <p class="author-name">post by: <span>HasTech</span> - 30 Oct 2017</p>
+                            </div>
+                            <a class="read-btn" href="single-blog.html">read more</a>
+                        </div>
+                    </div>
+                    <!--Single Blog End-->
+                </div>
+                <div class="col-md-12">
+                    <!--Single Blog Start-->
+                    <div class="single-blog">
+                        <div class="blog-img img-full">
+                            <a href="single-blog.html"><img src="~/img/blog/small/blog2.jpg" alt=""><span class="icon-view"></span></a>
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title"><a href="single-blog.html">Mercedes Benz Fashion Week – Mirror To The Soul 360</a></h3>
+                            <div class="blog-meta">
+                                <p class="author-name">post by: <span>HasTech</span> - 30 Oct 2017</p>
+                            </div>
+                            <a class="read-btn" href="single-blog.html">read more</a>
+                        </div>
+                    </div>
+                    <!--Single Blog End-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Blog Area End-->
