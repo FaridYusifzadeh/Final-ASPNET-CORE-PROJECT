@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using indecor_web_site.DAL;
 
 namespace indecor_web_site.Migrations
 {
     [DbContext(typeof(IndecorDbContext))]
-    partial class IndecorDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190913071113_CreateSingleFutureTable")]
+    partial class CreateSingleFutureTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

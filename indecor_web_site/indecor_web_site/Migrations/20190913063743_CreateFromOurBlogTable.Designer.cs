@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using indecor_web_site.DAL;
 
 namespace indecor_web_site.Migrations
 {
     [DbContext(typeof(IndecorDbContext))]
-    partial class IndecorDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190913063743_CreateFromOurBlogTable")]
+    partial class CreateFromOurBlogTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -111,25 +113,6 @@ namespace indecor_web_site.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("SingleBrands");
-                });
-
-            modelBuilder.Entity("indecor_web_site.Models.SingleFuture", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("IconAwesome")
-                        .IsRequired()
-                        .HasMaxLength(150);
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(150);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("SingleFutures");
                 });
 
             modelBuilder.Entity("indecor_web_site.Models.Slider", b =>

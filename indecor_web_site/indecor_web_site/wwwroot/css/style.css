@@ -1794,7 +1794,7 @@ ul.cart-items > li {
 	color: #ff7a5f;
 }
 .single-feature-area .feature-content h3:before {
-	content: "\e01d";
+
 	font-family: 'ElegantIcons';
 	font-size: 28px;
 	color: #ff7a5f;
@@ -1804,12 +1804,12 @@ ul.cart-items > li {
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
-.col-lg-4:nth-child(2) .single-feature-area .feature-content h3:before{
-    content: "\e027";
+/*.col-lg-4:nth-child(2) .single-feature-area .feature-content h3:before{
+  
 }
 .col-lg-4:nth-child(3) .single-feature-area .feature-content h3:before{
-    content: "\e014";
-}
+
+}*/
 /*---------------------------
     5. Banner Area CSS
 -----------------------------*/
@@ -1829,7 +1829,7 @@ ul.cart-items > li {
     6. Our Collection Area CSS
 --------------------------------*/
 .collection-bg {
-	background-image: url(img/bg/home1-bg1.jpg);
+	/*background-image: url(img/bg/home1-bg1.jpg);*/
 	background-position: center center;
 	background-repeat: repeat;
 }
@@ -2149,7 +2149,7 @@ ul.cart-items > li {
     8. Deal Product Area CSS
 -----------------------------*/
 .deal-bg {
-	background-image: url(img/bg/home1-bg2.jpg);
+
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -2320,7 +2320,7 @@ ul.cart-items > li {
     10. About Area CSS
 -----------------------------*/
 .about-bg {
-	background-image: url(img/bg/home1-bg3.jpg);
+	/*background-image: url(img/bg/home1-bg3.jpg);*/
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;

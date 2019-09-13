@@ -48,39 +48,28 @@
 <div class="feature-area pt-80 pb-50">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <!--Single Feature Area Start-->
-                <div class="single-feature-area mb-30">
-                    <div class="feature-content">
-                        <h3>free shipping worldwide</h3>
+            @foreach (var future in Model.SingleFutures)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <!--Single Feature Area Start-->
+                    <div class="single-feature-area mb-30">
+                        
+                        <div class="feature-content">
+                            <a style="font-size:28px;color:goldenrod;margin-left:20px"><i class="@future.IconAwesome"></i></a>
+                            <h3>@future.Title</h3>
+                        </div>
                     </div>
+                    <!--Single Feature Area End-->
                 </div>
-                <!--Single Feature Area End-->
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <!--Single Feature Area Start-->
-                <div class="single-feature-area mb-30">
-                    <div class="feature-content">
-                        <h3>free shipping worldwide</h3>
-                    </div>
-                </div>
-                <!--Single Feature Area End-->
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <!--Single Feature Area Start-->
-                <div class="single-feature-area mb-30">
-                    <div class="feature-content">
-                        <h3>free shipping worldwide</h3>
-                    </div>
-                </div>
-                <!--Single Feature Area End-->
-            </div>
+            }
+
+
         </div>
     </div>
 </div>
 <!--Feature Area End-->
 <!--Our Collection Area Start-->
-<div class="our-collection-area collection-bg pb-75">
+<div class="our-collection-area collection-bg pb-75" style="background-image: url(img/bg/@Model.BackgroundImages.ElementAt(0).Image)";>
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -1236,7 +1225,7 @@
 </div>
 <!--Product Area End-->
 <!--Deal Product Area Start-->
-<div class="deal-product-area deal-bg">
+<div class="deal-product-area deal-bg" style="	background-image: url(img/bg/@Model.BackgroundImages.ElementAt(1).Image);">
     <div class="deal-produt-slider owl-carousel">
         <!--Single Deal Product Start-->
         <div class="single-deal-product">
@@ -1778,13 +1767,13 @@
 </div>
 <!--List Product Area End-->
 <!--About Area Start-->
-<div class="about-area about-bg">
+<div class="about-area about-bg" style="background-image: url(img/bg/@Model.BackgroundImages.ElementAt(2).Image);">
     <div class="indecor-about">
         <div class="section-title">
-            <span class="sub-title">About Me</span>
-            <h2>neque dis nam parturient.</h2>
+            <span class="sub-title">@Model.Descriptions.ElementAt(1).Title</span>
+            <h2>@Model.Descriptions.ElementAt(1).Descript</h2>
         </div>
-        <p class="about-des">Mauris interdum magna eu neque convallis, vel laoreet lectus ultrices. Mauris at ullamcorper orci. Maecenas in nulla erat.</p>
+        <p class="about-des">@Model.AboutMeContexts.ElementAt(0).Context</p>
         <a class="about-btn" href="#">read more</a>
     </div>
 </div>
@@ -1796,45 +1785,16 @@
             <div class="col-12">
                 <div class="brand-active owl-carousel">
                     <!--Single Brand Start-->
-                    <div class="single-brand">
-                        <a href="#"><img src="~/img/brand/brand1.png" alt=""></a>
+                    @foreach (var brand in Model.SingleBrands)
+                    {
+                        <div class="single-brand">
+                        <a href="#"><img src="~/img/brand/@brand.Image" alt=""></a>
                     </div>
+                    }
+                    
                     <!--Single Brand End-->
-                    <!--Single Brand Start-->
-                    <div class="single-brand">
-                        <a href="#"><img src="~/img/brand/brand2.png" alt=""></a>
-                    </div>
-                    <!--Single Brand End-->
-                    <!--Single Brand Start-->
-                    <div class="single-brand">
-                        <a href="#"><img src="~/img/brand/brand3.png" alt=""></a>
-                    </div>
-                    <!--Single Brand End-->
-                    <!--Single Brand Start-->
-                    <div class="single-brand">
-                        <a href="#"><img src="~/img/brand/brand4.png" alt=""></a>
-                    </div>
-                    <!--Single Brand End-->
-                    <!--Single Brand Start-->
-                    <div class="single-brand">
-                        <a href="#"><img src="~/img/brand/brand5.png" alt=""></a>
-                    </div>
-                    <!--Single Brand End-->
-                    <!--Single Brand Start-->
-                    <div class="single-brand">
-                        <a href="#"><img src="~/img/brand/brand1.png" alt=""></a>
-                    </div>
-                    <!--Single Brand End-->
-                    <!--Single Brand Start-->
-                    <div class="single-brand">
-                        <a href="#"><img src="~/img/brand/brand4.png" alt=""></a>
-                    </div>
-                    <!--Single Brand End-->
-                    <!--Single Brand Start-->
-                    <div class="single-brand">
-                        <a href="#"><img src="~/img/brand/brand5.png" alt=""></a>
-                    </div>
-                    <!--Single Brand End-->
+                   
+                    
                 </div>
             </div>
         </div>
@@ -1855,70 +1815,27 @@
         </div>
         <div class="row">
             <div class="blog-slider owl-carousel">
-                <div class="col-md-12">
-                    <!--Single Blog Start-->
-                    <div class="single-blog">
-                        <div class="blog-img img-full">
-                            <a href="single-blog.html"><img src="~/img/blog/small/blog1.jpg" alt=""><span class="icon-view"></span></a>
-                        </div>
-                        <div class="blog-content">
-                            <h3 class="blog-title"><a href="single-blog.html">Best of Hair & Makeup New York Spring/Summer 2016</a></h3>
-                            <div class="blog-meta">
-                                <p class="author-name">post by: <span>HasTech</span> - 30 Oct 2017</p>
+                @foreach (var ourBlog in Model.FromOurBlogs)
+                {
+                    <div class="col-md-12">
+                        <!--Single Blog Start-->
+                        <div class="single-blog">
+                            <div class="blog-img img-full">
+                                <a href="single-blog.html"><img src="~/img/blog/small/@ourBlog.Image" alt=""><span class="icon-view"></span></a>
                             </div>
-                            <a class="read-btn" href="single-blog.html">read more</a>
-                        </div>
-                    </div>
-                    <!--Single Blog End-->
-                </div>
-                <div class="col-md-12">
-                    <!--Single Blog Start-->
-                    <div class="single-blog">
-                        <div class="blog-img img-full">
-                            <a href="single-blog.html"><img src="~/img/blog/small/blog2.jpg" alt=""><span class="icon-view"></span></a>
-                        </div>
-                        <div class="blog-content">
-                            <h3 class="blog-title"><a href="single-blog.html">Dior F/W 2015 First Fashion Show in 360• Experience</a></h3>
-                            <div class="blog-meta">
-                                <p class="author-name">post by: <span>HasTech</span> - 30 Oct 2017</p>
+                            <div class="blog-content">
+                                <h3 class="blog-title"><a href="single-blog.html">@ourBlog.Title</a></h3>
+                                <div class="blog-meta">
+                                    <p class="author-name">@ourBlog.TitlePost: <span>@ourBlog.TitleHash</span> - @ourBlog.TitleDate</p>
+                                </div>
+                                <a class="read-btn" href="single-blog.html">read more</a>
                             </div>
-                            <a class="read-btn" href="single-blog.html">read more</a>
                         </div>
+                        <!--Single Blog End-->
                     </div>
-                    <!--Single Blog End-->
-                </div>
-                <div class="col-md-12">
-                    <!--Single Blog Start-->
-                    <div class="single-blog">
-                        <div class="blog-img img-full">
-                            <a href="single-blog.html"><img src="~/img/blog/small/blog1.jpg" alt=""><span class="icon-view"></span></a>
-                        </div>
-                        <div class="blog-content">
-                            <h3 class="blog-title"><a href="single-blog.html">Best of Hair & Makeup New York Spring/Summer 2016</a></h3>
-                            <div class="blog-meta">
-                                <p class="author-name">post by: <span>HasTech</span> - 30 Oct 2017</p>
-                            </div>
-                            <a class="read-btn" href="single-blog.html">read more</a>
-                        </div>
-                    </div>
-                    <!--Single Blog End-->
-                </div>
-                <div class="col-md-12">
-                    <!--Single Blog Start-->
-                    <div class="single-blog">
-                        <div class="blog-img img-full">
-                            <a href="single-blog.html"><img src="~/img/blog/small/blog2.jpg" alt=""><span class="icon-view"></span></a>
-                        </div>
-                        <div class="blog-content">
-                            <h3 class="blog-title"><a href="single-blog.html">Mercedes Benz Fashion Week – Mirror To The Soul 360</a></h3>
-                            <div class="blog-meta">
-                                <p class="author-name">post by: <span>HasTech</span> - 30 Oct 2017</p>
-                            </div>
-                            <a class="read-btn" href="single-blog.html">read more</a>
-                        </div>
-                    </div>
-                    <!--Single Blog End-->
-                </div>
+                }
+
+
             </div>
         </div>
     </div>

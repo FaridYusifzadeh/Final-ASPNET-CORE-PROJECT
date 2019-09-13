@@ -23,7 +23,12 @@ namespace indecor_web_site.Controllers
             HomeModel homeModel = new HomeModel
             {
                 Sliders=_context.Sliders,
-                Descriptions=_context.Descriptions
+                Descriptions=_context.Descriptions,
+                BackgroundImages=_context.BackgroundImages,
+                AboutMeContexts=_context.AboutMeContexts,
+                SingleBrands=_context.SingleBrands,
+                FromOurBlogs=_context.FromOurBlogs,
+                SingleFutures=_context.SingleFutures
             };
             return View(homeModel);
         }
