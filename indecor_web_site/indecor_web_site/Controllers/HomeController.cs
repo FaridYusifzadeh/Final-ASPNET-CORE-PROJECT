@@ -28,7 +28,9 @@ namespace indecor_web_site.Controllers
                 AboutMeContexts=_context.AboutMeContexts,
                 SingleBrands=_context.SingleBrands,
                 FromOurBlogs=_context.FromOurBlogs,
-                SingleFutures=_context.SingleFutures
+                SingleFutures=_context.SingleFutures,
+                Product_Categories=_context.Product_Categories,
+                Products=_context.Products
             };
             return View(homeModel);
         }

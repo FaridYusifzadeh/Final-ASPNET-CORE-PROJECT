@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Slider>
+    @{
+        ViewData["Title"] = "Index";
+    }
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <a asp-action="Create" class="btn btn-primary">Create</a>
+
+                    <div class="card-body">
+                        <h5 class="card-title m-b-0">Description</h5>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Image</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Description</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @{
+                                int count = 1;
+                            }
+
+                            @foreach (var slider in Model)
+                            {
+
+
+                                <tr>
+                                    <td scope="row">@count</td>
+                                    <td>
+                                        <img src="~/img/@slider.Image" alt="Alternate Text" width="200px" />
+                                    
+                                    </td>
+                                    <td>@slider.Title</td>
+                                    <td>@(slider.Description.Substring(0, slider.Description.Length / 2) + "...")</td>
+                                    <td>
+                                        <a asp-action="Detail" asp-route-id="@slider.Id" class="btn btn-success">
+                                            <i class=" fas fa-eye"></i>
+                                        </a>
+                                        <a asp-action="Update" asp-route-id="@slider.Id" class="btn btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@slider.Id" class="btn btn-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                count++;
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+

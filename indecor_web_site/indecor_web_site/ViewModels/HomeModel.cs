@@ -15,5 +15,7 @@ namespace indecor_web_site.ViewModels
         public IEnumerable<SingleBrand> SingleBrands { get; set; }
         public IEnumerable<FromOurBlog> FromOurBlogs { get; set; }
         public IEnumerable<SingleFuture> SingleFutures { get; set; }
+        public IEnumerable<Product_Categorie> Product_Categories { get; set; }
+        public IEnumerable<Product> Products{ get; set; }
     }
 }

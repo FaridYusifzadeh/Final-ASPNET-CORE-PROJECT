@@ -43,6 +43,14 @@ namespace indecor_web_site
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                  name: "areas",
+                  template: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
+                );
+            }); 
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
                     "default",
                     "{controller=home}/{action=index}/{id?}"
                     );

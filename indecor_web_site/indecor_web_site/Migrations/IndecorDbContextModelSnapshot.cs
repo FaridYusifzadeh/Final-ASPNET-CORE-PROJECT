@@ -98,6 +98,68 @@ namespace indecor_web_site.Migrations
                     b.ToTable("FromOurBlogs");
                 });
 
+            modelBuilder.Entity("indecor_web_site.Models.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Active");
+
+                    b.Property<int>("BEST_SELLER");
+
+                    b.Property<int>("Count")
+                        .HasMaxLength(10);
+
+                    b.Property<string>("Datetime");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(300);
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasMaxLength(100);
+
+                    b.Property<int>("MOST_VIEW");
+
+                    b.Property<bool>("NEW_ARRIVALS");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Percent");
+
+                    b.Property<double>("Price")
+                        .HasMaxLength(10);
+
+                    b.Property<double>("PriceSale");
+
+                    b.Property<int>("Product_CategorieId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Product_CategorieId");
+
+                    b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("indecor_web_site.Models.Product_Categorie", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Active");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Product_Categories");
+                });
+
             modelBuilder.Entity("indecor_web_site.Models.SingleBrand", b =>
                 {
                     b.Property<int>("Id")
@@ -153,6 +215,14 @@ namespace indecor_web_site.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sliders");
+                });
+
+            modelBuilder.Entity("indecor_web_site.Models.Product", b =>
+                {
+                    b.HasOne("indecor_web_site.Models.Product_Categorie", "Product_Categorie")
+                        .WithMany()
+                        .HasForeignKey("Product_CategorieId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
