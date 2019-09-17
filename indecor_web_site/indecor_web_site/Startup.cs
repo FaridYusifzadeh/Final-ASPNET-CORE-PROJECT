@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using indecor_web_site.DAL;
+using indecor_web_site.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,6 +31,28 @@ namespace indecor_web_site
                 options.UseSqlServer(_config["ConnectionStrings:DefaultConnection"]);
 
             });
+
+            services.AddIdentity<AppUser, IdentityRole>(identityoptions => {
+                //passwords
+                identityoptions.Password.RequireDigit = true;
+                identityoptions.Password.RequireLowercase = true;
+                identityoptions.Password.RequireUppercase = true;
+                identityoptions.Password.RequireNonAlphanumeric = true;
+                identityoptions.Password.RequiredLength = 8;
+
+                //unikal email
+                identityoptions.User.RequireUniqueEmail = true;
+
+                //users login
+                identityoptions.Lockout.MaxFailedAccessAttempts = 3;
+                identityoptions.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(50);
+                identityoptions.Lockout.AllowedForNewUsers = true;
+
+            }).AddEntityFrameworkStores<IndecorDbContext>()
+              .AddDefaultUI()
+              .AddDefaultTokenProviders();
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,7 +63,10 @@ namespace indecor_web_site
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseCookiePolicy();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

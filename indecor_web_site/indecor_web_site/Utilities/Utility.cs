@@ -18,5 +18,14 @@ namespace indecor_web_site.Utilities
             }
             return false;
         }
+
+        public enum Roles
+        {
+            Admin,
+            Member
+        }
+
+        public const string AdminRole = "Admin";
+        public const string MemberRole = "Member";
     }
 }

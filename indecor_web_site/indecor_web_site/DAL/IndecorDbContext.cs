@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace indecor_web_site.DAL
 {
-    public class IndecorDbContext:IdentityDbContext
+    public class IndecorDbContext:IdentityDbContext<AppUser>
     {
         public IndecorDbContext(DbContextOptions<IndecorDbContext> options):base(options)
         {

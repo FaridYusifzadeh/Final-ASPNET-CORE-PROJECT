@@ -62,7 +62,7 @@ using indecor_web_site.Models;
             WriteLiteral("\r\n    <div class=\"container-fluid\">\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-12\">\r\n                <div class=\"card\">\r\n                  \r\n                    ");
             EndContext();
             BeginContext(250, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b02f551739eb48fd91288478e70c53ba", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc7bcedc788848efbe78a07c9cb7aaad", async() => {
                 BeginContext(297, 6, true);
                 WriteLiteral("Create");
                 EndContext();
@@ -152,7 +152,7 @@ using indecor_web_site.Models;
             WriteLiteral("</td>\r\n                                    <td>\r\n                                        ");
             EndContext();
             BeginContext(1516, 190, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b89771176597419ca8a0413000914754", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d533cb7772384ca39be06ff5a0f1bc72", async() => {
                 BeginContext(1587, 115, true);
                 WriteLiteral("\r\n                                            <i class=\" fas fa-eye\"></i>\r\n                                        ");
                 EndContext();
@@ -188,7 +188,7 @@ using indecor_web_site.Models;
             WriteLiteral("\r\n                                        ");
             EndContext();
             BeginContext(1748, 190, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7eebce67252647cbb71f7414d702c717", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1210abbb330b4575b31ec313a4e6d0a6", async() => {
                 BeginContext(1819, 115, true);
                 WriteLiteral("\r\n                                            <i class=\"fas fa-edit\"></i>\r\n                                        ");
                 EndContext();
@@ -224,7 +224,7 @@ using indecor_web_site.Models;
             WriteLiteral("\r\n                                        ");
             EndContext();
             BeginContext(1980, 194, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "54043cc694c04bf2ba79c1ddee06e7b1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "61500797cd7141cb8ee363f412017507", async() => {
                 BeginContext(2050, 120, true);
                 WriteLiteral("\r\n                                            <i class=\"fas fa-trash-alt\"></i>\r\n                                        ");
                 EndContext();

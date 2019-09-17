@@ -69,7 +69,7 @@ using indecor_web_site.Models;
             WriteLiteral("\r\n    <div class=\"container-fluid\">\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-12\">\r\n                <div class=\"card\">\r\n\r\n                    ");
             EndContext();
             BeginContext(239, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "482f57f6622d4132b4ece0aaf1a4e431", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "06d5bb7d05e34280942817ce1674c1be", async() => {
                 BeginContext(286, 6, true);
                 WriteLiteral("Create");
                 EndContext();
@@ -140,7 +140,7 @@ using indecor_web_site.Models;
             WriteLiteral("</td>\r\n                                    <td>\r\n                                        ");
             EndContext();
             BeginContext(1348, 68, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4b39fb3f539c4c508dc71c0e5514cf49", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a5f549e6e1534ce69d4acc46dab6817c", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -187,7 +187,7 @@ AddHtmlAttributeValue("", 1364, slider.Image, 1364, 13, false);
             WriteLiteral("</td>\r\n                                    <td>\r\n                                        ");
             EndContext();
             BeginContext(1761, 192, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aff755d81cb349e39a3403062910d090", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5d3a3f80adc4ee3b1ae0d81c028e242", async() => {
                 BeginContext(1834, 115, true);
                 WriteLiteral("\r\n                                            <i class=\" fas fa-eye\"></i>\r\n                                        ");
                 EndContext();
@@ -223,7 +223,7 @@ AddHtmlAttributeValue("", 1364, slider.Image, 1364, 13, false);
             WriteLiteral("\r\n                                        ");
             EndContext();
             BeginContext(1995, 192, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "582d4766ca5e45b78dab75bbb892ff97", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bb794310c33b42449b965d78635528c8", async() => {
                 BeginContext(2068, 115, true);
                 WriteLiteral("\r\n                                            <i class=\"fas fa-edit\"></i>\r\n                                        ");
                 EndContext();
@@ -259,7 +259,7 @@ AddHtmlAttributeValue("", 1364, slider.Image, 1364, 13, false);
             WriteLiteral("\r\n                                        ");
             EndContext();
             BeginContext(2229, 196, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "feb28535a60a4780a9b14f8126f3693d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e20ed415c19645efa2bff07d29f6ef5a", async() => {
                 BeginContext(2301, 120, true);
                 WriteLiteral("\r\n                                            <i class=\"fas fa-trash-alt\"></i>\r\n                                        ");
                 EndContext();

@@ -38,3 +38,5 @@ C:\Users\Farid\Desktop\Final Project ASPNET CORE\indecor_web_site\indecor_web_si
 C:\Users\Farid\Desktop\Final Project ASPNET CORE\indecor_web_site\indecor_web_site\obj\Debug\netcoreapp2.1\Razor\Areas\IndecorAdmin\Views\Slider\Detail.g.cshtml.cs
 C:\Users\Farid\Desktop\Final Project ASPNET CORE\indecor_web_site\indecor_web_site\obj\Debug\netcoreapp2.1\Razor\Areas\IndecorAdmin\Views\Slider\Delete.g.cshtml.cs
 C:\Users\Farid\Desktop\Final Project ASPNET CORE\indecor_web_site\indecor_web_site\obj\Debug\netcoreapp2.1\Razor\Areas\IndecorAdmin\Views\Slider\Update.g.cshtml.cs
+C:\Users\Farid\Desktop\Final Project ASPNET CORE\indecor_web_site\indecor_web_site\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs
+C:\Users\Farid\Desktop\Final Project ASPNET CORE\indecor_web_site\indecor_web_site\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.g.cshtml.cs
